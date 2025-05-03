@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import StatsLanding from './pages/Landing';
-import Compiler from './pages/Compiler';
-import Labs from './pages/Labs';
-import Learn from './pages/Learn';
+import StatsLanding from './pages/Landing/Landing';
+import Compiler from './pages/Compiler/Compiler';
+import Labs from './pages/Labs/Labs';
+import Learn from './pages/Learn/Learn';
 function App() {
   return (
     <Router>
