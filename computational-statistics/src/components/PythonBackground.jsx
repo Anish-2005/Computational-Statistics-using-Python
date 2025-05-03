@@ -25,7 +25,7 @@ const pythonCodeLines = [
     ];
 const PythonBackground = () => {
     return (
-        <div className="fixed inset-0 z-0 overflow-hidden">
+        <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
             {/* Circuit board pattern */}
             <div className="absolute inset-0 opacity-5 bg-[length:40px_40px] bg-[linear-gradient(to_right,#3b3b3b_1px,transparent_1px),linear-gradient(to_bottom,#3b3b3b_1px,transparent_1px)]" />
             

@@ -140,8 +140,8 @@ const PythonCompiler = () => {
       <PythonBackground />
       <NavBar />
 
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row justify-between items-center mb-8">
+      <div className=" max-w-7xl mx-auto">
+      <div className="z-50 flex flex-col lg:flex-row justify-between items-center mb-8">
           <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-amber-400">
             PyStatLab Compiler
           </h1>
@@ -158,7 +158,7 @@ const PythonCompiler = () => {
             <button
               onClick={executePythonCode}
               disabled={isLoading}
-              className="px-4 py-2 bg-orange-600 hover:bg-orange-700 rounded-md font-medium flex items-center gap-2 transition-colors disabled:opacity-50"
+              className="z-100 px-4 py-2 bg-orange-600 hover:bg-orange-700 rounded-md font-medium flex items-center gap-2 transition-colors disabled:opacity-50"
             >
               {isLoading ? 'Running...' : 'Run Code'}
             </button>
