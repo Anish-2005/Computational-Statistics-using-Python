@@ -34,7 +34,7 @@ export default function PythonLabsPage() {
 
     const fetchAssignments = async () => {
       try {
-        const response = await fetch('https://object-oriented-programming-cpp-lab.onrender.com/api/python-assignments', {
+        const response = await fetch(`${import.meta.env.VITE_FRONTEND_URL}/api/python-assignments`, {
           signal: abortController.signal
         });
         if (!response.ok) throw new Error('Failed to fetch assignments');
@@ -98,7 +98,7 @@ export default function PythonLabsPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://object-oriented-programming-cpp-lab.onrender.com/api/python-assignments', {
+      const response = await fetch(`${import.meta.env.VITE_FRONTEND_URL}/api/python-assignments`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
@@ -120,7 +120,7 @@ export default function PythonLabsPage() {
   };
   const handleDelete = async (id) => {
     try {
-      await fetch(`https://object-oriented-programming-cpp-lab.onrender.com/api/python-assignments/${id}`, { method: 'DELETE' });
+      await fetch(`${import.meta.env.VITE_FRONTEND_URL}/api/python-assignments/${id}`, { method: 'DELETE' });
       setAssignments(prev => prev.filter(a => a._id !== id));
     } catch (err) {
       setError(err.message);
